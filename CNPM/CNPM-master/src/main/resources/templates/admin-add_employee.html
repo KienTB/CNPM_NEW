@@ -77,10 +77,9 @@
 <script>
     function showAlert(message) {
     const alertBox = document.getElementById('success-alert');
-    alertBox.innerText = message; // Thay đổi nội dung alert theo thông báo
-    alertBox.classList.add('show'); // Hiển thị alert box
+    alertBox.innerText = message;
+    alertBox.classList.add('show');
 
-    // Tự động ẩn sau 3 giây
     setTimeout(() => {
         alertBox.classList.remove('show');
     }, 3000);
@@ -119,7 +118,7 @@ function submitForm() {
                 phone: phone,
                 username: username,
                 email: email,
-                password: "123456" // Mật khẩu mặc định
+                password: "123456"
             };
 
             fetch('/api/add-employee', {
@@ -129,7 +128,7 @@ function submitForm() {
                 },
                 body: JSON.stringify(employeeData),
             })
-            .then(response => response.text()) // Chuyển đổi phản hồi sang text để log
+            .then(response => response.text())
             .then(data => {
                 console.log(data); // Log kết quả phản hồi
                 showAlert('Employee added successfully!');

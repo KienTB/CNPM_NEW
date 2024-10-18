@@ -37,9 +37,7 @@ public class Employee {
     private String username;
 
     @Column(name = "password", length = 50)
-    private String password = "123456";  // Mặc định '123456'
-
-    // Getters và Setters
+    private String password = "123456";
 
     public long getIdEmployee() {
         return idEmployee;
