@@ -52,10 +52,10 @@ faces_data = faces_data.reshape(faces_data.shape[0], -1)
 # Kết nối với MySQL
 connection = mysql.connector.connect(
     host="localhost",
-    user="root",  # Thay bằng tên người dùng MySQL
-    password="123456",  # Thay bằng mật khẩu MySQL
-    database="user",
-    port=3406
+    user="root",
+    password="123456",
+    database="cnpm",
+    port=3306
 )
 
 cursor = connection.cursor()
